@@ -3,7 +3,8 @@ realm 을 사용해보았다.
 ---
 
  - realm init
- ```
+
+```
 Realm realm; // 외부에서 선언
 
 protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,7 @@ public void realmSave() {
   - realm save 2 : 기존에 데이터가 있으면 변경저장, 없으면 새로저장
   - realm에서의 쓰기는 한 transaction 내에서 이뤄져야 하는데 쉬운방법은 realm.executeTransaction 내에서 하는것이다.
 
- ```
+```
 Data data;
 
 data = realm.where(Data.class)
@@ -91,7 +92,7 @@ data = realm.where(Data.class)
 	});
 	Toast.makeText(MainActivity.this, "변.경.저.장.", Toast.LENGTH_SHORT).show();
 }
- ```
+```
 
   - realm Read
 
